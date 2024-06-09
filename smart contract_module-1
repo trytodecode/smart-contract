@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 contract Assertsol {
     function summation(uint256 father_age, uint256 son_age) external pure returns (uint256) {
         // require statement
-        require(father_age != 0, "sum1 cannot be zero.");
+        require(father_age != 0, "father_age cannot be zero.");
 
         // assert statement
         assert(father_age >= son_age);
