@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.8.0;
+
+contract Assertsol {
+    function summation(uint256 father_age, uint256 son_age) external pure returns (uint256) {
+        // require statement
+        require(father_age != 0, "sum1 cannot be zero.");
+
+        // assert statement
+        assert(father_age >= son_age);
+
+        // Perform the difference 
+        uint256 difference_age = father_age - son_age;
+
+        // revert statement
+        if (difference_age <10) {
+            revert("father is not so much elder than son ");
+        }
+
+        return difference_age;
+    }
+}
